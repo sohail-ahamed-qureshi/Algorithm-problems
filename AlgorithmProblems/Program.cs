@@ -5,7 +5,7 @@ namespace AlgorithmProblems
     class Program
     {
         /// <summary>
-        /// DS algorithm- Insertion sort, sorting an array of word from wordlist.
+        /// DS algorithm- Bubble sort, sorting an array of integers from array.
         /// </summary>
         /// <param name="args"></param>
         static void Main(string[] args)
@@ -14,6 +14,7 @@ namespace AlgorithmProblems
             Console.WriteLine("Press 1 for Permutation problem statement");
             Console.WriteLine("Press 2 for Binary search in a word list");
             Console.WriteLine("Press 3 for Insertion sort to sort a word list");
+            Console.WriteLine("Press 4 for Bubble sort to sort a Integer Array");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -31,6 +32,10 @@ namespace AlgorithmProblems
                 case 3:
                     //insertion sort 
                     InsertionSort.Sorting();
+                    break;
+                case 4:
+                    //Bubble sort 
+                    BubbleSort.Sorting();
                     break;
                 default:
                     Console.WriteLine("invalid selection made!!");

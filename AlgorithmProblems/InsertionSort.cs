@@ -22,7 +22,7 @@ namespace AlgorithmProblems
         /// method to Display an array 
         /// </summary>
         /// <param name="sortedArray"></param>
-        private static void Display(string[] Array)
+        public static void Display(string[] Array)
         {
             foreach (string item in Array)
             {
