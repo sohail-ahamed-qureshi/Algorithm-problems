@@ -5,7 +5,7 @@ namespace AlgorithmProblems
     class Program
     {
         /// <summary>
-        /// DS algorithm- Binary search a word from wordlist.
+        /// DS algorithm- Insertion sort, sorting an array of word from wordlist.
         /// </summary>
         /// <param name="args"></param>
         static void Main(string[] args)
@@ -13,6 +13,7 @@ namespace AlgorithmProblems
             Console.WriteLine("Algorithm problems");
             Console.WriteLine("Press 1 for Permutation problem statement");
             Console.WriteLine("Press 2 for Binary search in a word list");
+            Console.WriteLine("Press 3 for Insertion sort to sort a word list");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -26,6 +27,10 @@ namespace AlgorithmProblems
                 case 2:
                     //binary search a word from word list
                     BinarySearchWord.BinarySearch();
+                    break; 
+                case 3:
+                    //insertion sort 
+                    InsertionSort.Sorting();
                     break;
                 default:
                     Console.WriteLine("invalid selection made!!");
