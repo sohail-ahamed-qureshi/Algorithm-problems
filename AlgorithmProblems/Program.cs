@@ -15,6 +15,7 @@ namespace AlgorithmProblems
             Console.WriteLine("Press 2 for Binary search in a word list");
             Console.WriteLine("Press 3 for Insertion sort to sort a word list");
             Console.WriteLine("Press 4 for Bubble sort to sort a Integer Array");
+            Console.WriteLine("Press 5 for Merge sort to sort a list of Strings");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -36,6 +37,10 @@ namespace AlgorithmProblems
                 case 4:
                     //Bubble sort 
                     BubbleSort.Sorting();
+                    break;
+                case 5:
+                    //Merge sort 
+                    MergeSort.Sorting();
                     break;
                 default:
                     Console.WriteLine("invalid selection made!!");
