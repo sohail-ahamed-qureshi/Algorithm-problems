@@ -17,6 +17,7 @@ namespace AlgorithmProblems
             Console.WriteLine("Press 4 for Bubble sort to sort a Integer Array");
             Console.WriteLine("Press 5 for Merge sort to sort a list of Strings");
             Console.WriteLine("Press 6 check two strings are Anagram");
+            Console.WriteLine("Press 7 to print prime numbers in 0-1000 range");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -46,6 +47,10 @@ namespace AlgorithmProblems
                 case 6:
                     //Anagram 
                     Anagram.CheckAnagram();
+                    break;
+                case 7:
+                    //prime numbers in 0 - 1000 range 
+                    PrimeNumbers.Print();
                     break;
                 default:
                     Console.WriteLine("invalid selection made!!");
