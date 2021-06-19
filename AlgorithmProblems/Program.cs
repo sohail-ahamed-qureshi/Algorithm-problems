@@ -53,16 +53,11 @@ namespace AlgorithmProblems
                     //prime numbers in 0 - 1000 range 
                     PrimeNumbers.Print();
                     break;
-                case 8:
-                    //prime numbers in 0 - 1000 range 
-                    PrimeNumbers.Print();
-                    break;
                 default:
                     Console.WriteLine("invalid selection made!!");
                     Console.WriteLine("Enter a valid option: ");
                     break;
             }
-
         }
     }
 }
