@@ -8,7 +8,7 @@ namespace AlgorithmProblems
     {
         internal static void CheckAnagram()
         {
-            Console.WriteLine("Enter tw strings.");
+            Console.WriteLine("Enter two strings.");
             Console.WriteLine("string1 :");
             string firstWord = Console.ReadLine();
             Console.WriteLine("string2 :");

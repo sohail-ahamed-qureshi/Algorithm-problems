@@ -18,6 +18,7 @@ namespace AlgorithmProblems
             Console.WriteLine("Press 5 for Merge sort to sort a list of Strings");
             Console.WriteLine("Press 6 check two strings are Anagram");
             Console.WriteLine("Press 7 to print prime numbers in 0-1000 range");
+            Console.WriteLine("Press 8 to print prime numbers that are Anagram and Palindrome in 0-1000 range");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -31,7 +32,7 @@ namespace AlgorithmProblems
                 case 2:
                     //binary search a word from word list
                     BinarySearchWord.BinarySearch();
-                    break; 
+                    break;
                 case 3:
                     //insertion sort 
                     InsertionSort.Sorting();
@@ -52,11 +53,16 @@ namespace AlgorithmProblems
                     //prime numbers in 0 - 1000 range 
                     PrimeNumbers.Print();
                     break;
+                case 8:
+                    //prime numbers in 0 - 1000 range 
+                    PrimeNumbers.Print();
+                    break;
                 default:
                     Console.WriteLine("invalid selection made!!");
                     Console.WriteLine("Enter a valid option: ");
                     break;
-            } 
+            }
+
         }
     }
 }
