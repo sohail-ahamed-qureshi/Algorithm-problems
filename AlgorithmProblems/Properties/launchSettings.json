@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "AlgorithmProblems": {
+      "commandName": "Project",
+      "commandLineArgs": "10"
+    }
+  }
+}

@@ -17,8 +17,8 @@ namespace AlgorithmProblems
             Console.WriteLine("Press 4 for Bubble sort to sort a Integer Array");
             Console.WriteLine("Press 5 for Merge sort to sort a list of Strings");
             Console.WriteLine("Press 6 check two strings are Anagram");
-            Console.WriteLine("Press 7 to print prime numbers in 0-1000 range");
-            Console.WriteLine("Press 8 to print prime numbers that are Anagram and Palindrome in 0-1000 range");
+            Console.WriteLine("Press 7 to print prime numbers that are Anagram and Palindrome in 0-1000 range");
+            Console.WriteLine("Press 8 to Find the number.");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -52,6 +52,12 @@ namespace AlgorithmProblems
                 case 7:
                     //prime numbers in 0 - 1000 range 
                     PrimeNumbers.Print();
+                    break;
+                case 8:
+                    //Find your Number 
+                    int number = Convert.ToInt32(args[0]);
+                    FindNumber findNumber = new FindNumber();
+                    findNumber.SeachNumber(number, 1, 100);
                     break;
                 default:
                     Console.WriteLine("invalid selection made!!");
