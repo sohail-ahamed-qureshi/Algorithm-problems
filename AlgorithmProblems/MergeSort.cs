@@ -10,8 +10,8 @@ namespace AlgorithmProblems
             Console.WriteLine("Unsorted Array");
             InsertionSort.Display(array);
             Console.WriteLine("Sorted array....");
-            int low = 0, high = array.Length-1;
-             MergeSorting(array, low, high);
+            int low = 0, high = array.Length - 1;
+            MergeSorting(array, low, high);
             InsertionSort.Display(array);
         }
         /// <summary>
@@ -25,61 +25,71 @@ namespace AlgorithmProblems
         private static string[] MergeSorting(string[] array, int low, int high)
         {
             int mid;
-            string[] mergeArr = new string[8];
             if (low < high)
             {
-                mid = low +(high - low) / 2;
+                mid = low + (high - low) / 2;
                 MergeSorting(array, low, mid);
                 MergeSorting(array, mid + 1, high);
                 Merge(array, low, mid, high);
             }
             return array;
         }
-
-        private static string[] Merge(string[] array, int low, int mid, int high)
+        /// <summary>
+        /// merging the arrays and sorting them
+        /// </summary>
+        /// <param name="arr"></param>
+        /// <param name="low"></param>
+        /// <param name="mid"></param>
+        /// <param name="high"></param>
+        /// <returns></returns>
+        public static string[] Merge(string[] arr, int low, int mid, int high)
         {
-            int ithElement = low;
-            int jthElement = mid +1;
-            int kthElement = low;
-            string[] mergedArray = new string[8];
+            
+            int n1 = mid - low + 1;
+            int n2 = high - mid;
 
-            while (ithElement <= mid && jthElement <= high)
+            string[] a = new string[n1];
+            string[] b = new string[n2];
+            int i, j;
+            for (i = 0; i < n1; i++)
             {
-                if ((array[ithElement].CompareTo(array[jthElement])) < 0)
+                a[i] = arr[low + i];
+            }
+
+            for (j = 0; j < n2; j++)
+            {
+                b[j] = arr[mid + 1 + j];
+            }
+
+            i = 0;
+            j = 0;
+            int k = low;
+
+            while (i < n1 && j < n2)
+            {
+                if (a[i].CompareTo(b[j]) < 0)
                 {
-                    mergedArray[kthElement] = array[ithElement];
-                    ithElement++;
+                    arr[k] = a[i];
+                    k++; i++;
                 }
                 else
                 {
-                    mergedArray[kthElement] = array[jthElement];
-                    jthElement++;
-                }
-                kthElement++;
-            }
-            if (ithElement > mid)
-            {
-                while (jthElement <= high)
-                {
-                    mergedArray[kthElement] = array[jthElement];
-                    jthElement++;
-                    kthElement++;
+                    arr[k] = b[j];
+                    k++; j++;
                 }
             }
-            else
+
+            while (i < n1)
             {
-                while (ithElement <= mid)
-                {
-                    mergedArray[kthElement] = array[ithElement];
-                    ithElement++;
-                    kthElement++;
-                }
+                arr[k] = a[i];
+                k++; i++;
             }
-            for (kthElement = low; kthElement < high; kthElement++)
+            while (j < n2)
             {
-                array[kthElement] = mergedArray[kthElement];
+                arr[k] = b[j];
+                k++; j++;
             }
-            return mergedArray;
+            return arr;
         }
     }
 }
